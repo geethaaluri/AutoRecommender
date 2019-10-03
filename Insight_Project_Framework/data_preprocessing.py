@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 #
 # data_surprise.to_csv('data_surprise.csv', index=False)
 
-def get_data(_file_path,_save_path):
+def get_data(_file_path, _save_path):
     """
     Method to generate a clean pandas dataframe given file path
     :param _file_path: input raw data file path
@@ -23,42 +23,22 @@ def get_data(_file_path,_save_path):
     df = pd.read_csv(_file_path, sep='\t', usecols=cols)
 
     # selecting a subset of the data with customers who purchased min 10 items and items which have a min of 10 ratings
-    df_dense = df.groupby('product_id').filter(lambda x: x['customer_id'].nunique() >= 10).reset_index()
-    df_denser = df_dense.groupby('customer_id').filter(lambda x: x['product_id'].nunique() >= 10).reset_index()
+    # df_dense = df.groupby('product_id').filter(lambda x: x['customer_id'].nunique() >= 10).reset_index()
+    # df_denser = df_dense.groupby('customer_id').filter(lambda x: x['product_id'].nunique() >= 10).reset_index()
 
-    data_subset = df_denser[['customer_id', 'product_id', 'product_parent',
-                             'product_title', 'star_rating', 'review_date']]
+    data_subset = df.sample(frac=0.1)[['customer_id', 'product_id', 'product_parent',
+                                       'product_title', 'star_rating', 'review_date']]
 
     # changing customer_id, product_parent to object
     # star rating to int, review_date to date
     data_subset['customer_id'] = data_subset['customer_id'].astype(str)
     data_subset['product_parent'] = data_subset['product_parent'].astype(str)
-    data_subset['star_rating'] = data_subset['star_rating'].astype(int, errors='ignore')
+    data_subset = data_subset[~data_subset['star_rating'].astype(str).str.startswith('20')]
+    data_subset['star_rating'] = data_subset['star_rating'].astype(float, errors='ignore')
     data_subset['review_date'] = data_subset['review_date'].apply(lambda x: pd.to_datetime(x, errors='coerce',
                                                                                            format='%Y-%m-%d'))
     # saving the cleaned file to folder
     if _save_path:
-         data_subset.to_csv(_save_path, index=False)
+        data_subset.to_csv(_save_path, index=False)
 
     return data_subset
-
-
-def convert_data_surprise(_file_path,_save_path):
-    """
-    Method to generate pandas dataframe given file path to be ingested by surprise pkg
-
-    :param _file_path: input data_subset file path
-    :param _save_path: output data_surprise file path
-    :return: data_surprise dataframe
-    """
-    data = pd.read_csv(_file_path)
-    data_surprise = data[['customer_id', 'product_id', 'star_rating']]. \
-        rename(columns={'customer_id': 'userID', 'product_id': 'itemID', 'star_rating': 'rating'})
-
-    if _save_path:
-         data_surprise.to_csv(_save_path, index=False)
-
-    return data_surprise
-
-
-
