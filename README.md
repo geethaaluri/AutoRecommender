@@ -6,7 +6,10 @@
 
 RecServe is a recommendations as a service tool that allows users to input their custom datasets and obtain recommendations easily. It is evident that personalization technologies provide great business results and engage users dramatically increasing customer retention. Only larger organizations like Amazon and Netflix were able to leverage and customize the recommendation engines sustained by specific business units. Maintaining specific teams within the company involves developmental cost that is simply too high for most SME's and small businesses. Automated recommendation systems which can be easily integrated with their existing systems is an elegant solution to this problem.
 
-RecServe waddresses the issues of recommendation algorithms creating negative feedback loops, and allows users to be aware of the profile they are building, and tune it to see the content that interests them.
+RecServe is an intelligent recommendation system that recommends a single algorithm without training and tuning five or more different ML algorithms!
+
+A Google slide presentation can be found here: [RecServe]
+(http://bit.ly/geetha-recserve)
 
 - **Insight_Project_Framework** : Put all source code for production within structured directory
 - **tests** : Put all source code for testing in an easy to find location
