@@ -1,7 +1,13 @@
-# Insight_Project_Framework
-Framework for machine learning projects at Insight Data Science.
+# RecServe
+*Recommendations as a service*
 
-## Motivation for this project format:
+
+## Project Description:
+
+RecServe is a recommendations as a service tool that allows users to input their custom datasets and obtain recommendations easily. Only larger organizations like Amazon and Netflix were able to leverage and customize the recommendation engines sustained by specific business units. Maintaining specific teams within the company involves developmental cost that is simply too high for most SME's and small businesses. Automated recommendation systems which can be easily integrated with their existing systems is an elegant solution to this problem.
+
+RecServe waddresses the issues of recommendation algorithms creating negative feedback loops, and allows users to be aware of the profile they are building, and tune it to see the content that interests them.
+
 - **Insight_Project_Framework** : Put all source code for production within structured directory
 - **tests** : Put all source code for testing in an easy to find location
 - **configs** : Enable modification of all preset variables within single directory (consisting of one or many config files for separate tasks)
