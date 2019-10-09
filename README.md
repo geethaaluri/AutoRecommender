@@ -14,12 +14,12 @@ After downloading this repo and follow the installation instuctions below you wi
 
 The command line interface will prompt you for information and display your results, for example: 
 
-> *Welcome to RecServe! Let me help you with the product recommendations.*
+> *"Welcome to RecServe! Let me help you with the product recommendations."*
 
 > Enter the path for your sample data: data_subset.csv
 
 
-> *Geetha, do you want to recommend items for users to purchase? [y/N]*: 
+> *"Geetha, do you want to recommend items for users to purchase? [y/N]*"
 > ***Yes***
 
 > Enter the customer id: 18055986
@@ -36,7 +36,7 @@ The command line interface will prompt you for information and display your resu
 	5. Rheem Ruud Weather King, RGP Mid Efficiency
 	
 	
-> *"Geetha, do you want to recommend similar items for users to purchase? [y/N]?"*
+> *"Geetha, do you want to recommend similar items for users to purchase? [y/N]*"
 > ***Yes****
 
 > Enter the product name: SimpliSafe Wireless Home Security Command
