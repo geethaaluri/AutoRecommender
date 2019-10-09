@@ -8,128 +8,32 @@ RecServe is a recommendations as a service tool that allows users to input their
 
 RecServe is an intelligent recommendation system that recommends a single algorithm without training and tuning five or more different ML algorithms!
 
-A Google slide presentation can be found here: [RecServe]
-(http://bit.ly/geetha-recserve)
+A Google slide presentation can be found here: http://bit.ly/geetha-recserve
 
-- **Insight_Project_Framework** : Put all source code for production within structured directory
-- **tests** : Put all source code for testing in an easy to find location
-- **configs** : Enable modification of all preset variables within single directory (consisting of one or many config files for separate tasks)
-- **data** : Include example a small amount of data in the Github repository so tests can be run to validate installation
-- **build** : Include scripts that automate building of a standalone environment
-- **static** : Any images or content to include in the README or web framework if part of the pipeline
+After downloading this repo and follow the installation instuctions below you will be able to experiment with RecServe through an interactive command line interface.
+
+The command line interface will prompt you for information and display your results, for example: 
+
+> *Thank you Amber here are your recommendations:*
+> Generating Movie Recommendations...
+> Movies (year) Average Rating:
+
+	['Return of the Jedi (1983)' 3.8]
+	['Wizard of Oz, The (1939)' 3.78]
+	['Empire Strikes Back, The (1980)' 3.76]
+
+> *Would you like to view the factors that led to these particular movie recommendations? [y/N]*: 
+> ***Yes***
+
+> These movies were selected for by using ***10*** similar user profiles for movie recommendations
+> These ***10*** user profiles profiles were ***>97.88%*** similar to your own.
+	
+	Atrribute breakdown of similar users:
+	Female gender: 80.0%
+	Over the age of 30: 30.0%
+	Technical occupation: 100.0%
+	Westcoast: 40.0%
 
 ## Setup
 Clone repository and update python path
-```
-repo_name=Insight_Project_Framework # URL of your new repository
-username=mrubash1 # Username for your personal github account
-git clone https://github.com/$username/$repo_name
-cd $repo_name
-echo "export $repo_name=${PWD}" >> ~/.bash_profile
-echo "export PYTHONPATH=$repo_name/src:${PYTHONPATH}" >> ~/.bash_profile
-source ~/.bash_profile
-```
-Create new development branch and switch onto it
-```
-branch_name=dev-readme_requisites-20180905 # Name of development branch, of the form 'dev-feature_name-date_of_creation'}}
-git checkout -b $branch_name
-```
-
-## Initial Commit
-Lets start with a blank slate: remove `.git` and re initialize the repo
-```
-cd $repo_name
-rm -rf .git   
-git init   
-git status
-```  
-You'll see a list of file, these are files that git doesn't recognize. At this point, feel free to change the directory names to match your project. i.e. change the parent directory Insight_Project_Framework and the project directory Insight_Project_Framework:
-Now commit these:
-```
-git add .
-git commit -m "Initial commit"
-git push origin $branch_name
-```
-
-## Requisites
-
-- List all packages and software needed to build the environment
-- This could include cloud command line tools (i.e. gsutil), package managers (i.e. conda), etc.
-
-#### Dependencies
-
-- [Streamlit](streamlit.io)
-
-#### Installation
-To install the package above, pleae run:
-```shell
-pip install -r requiremnts
-```
-
-## Build Environment
-- Include instructions of how to launch scripts in the build subfolder
-- Build scripts can include shell scripts or python setup.py files
-- The purpose of these scripts is to build a standalone environment, for running the code in this repository
-- The environment can be for local use, or for use in a cloud environment
-- If using for a cloud environment, commands could include CLI tools from a cloud provider (i.e. gsutil from Google Cloud Platform)
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Configs
-- We recommond using either .yaml or .txt for your config files, not .json
-- **DO NOT STORE CREDENTIALS IN THE CONFIG DIRECTORY!!**
-- If credentials are needed, use environment variables or HashiCorp's [Vault](https://www.vaultproject.io/)
-
-
-## Test
-- Include instructions for how to run all tests after the software is installed
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Run Inference
-- Include instructions on how to run inference
-- i.e. image classification on a single image for a CNN deep learning project
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Build Model
-- Include instructions of how to build the model
-- This can be done either locally or on the cloud
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Serve Model
-- Include instructions of how to set up a REST or RPC endpoint
-- This is for running remote inference via a custom model
-```
-# Example
-
-# Step 1
-# Step 2
-```
-
-## Analysis
-- Include some form of EDA (exploratory data analysis)
-- And/or include benchmarking of the model and results
-```
-# Example
-
-# Step 1
-# Step 2
 ```
