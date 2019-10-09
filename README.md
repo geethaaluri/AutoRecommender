@@ -16,17 +16,16 @@ The command line interface will prompt you for information and display your resu
 
 > *Welcome to RecServe! Let me help you with the product recommendations.*
 
-> Enter your name: Geetha
-
-> Enter the name of your business: Insight
-
 > Enter the path for your sample data: data_subset.csv
 
 
 > *Geetha, do you want to recommend items for users to purchase? [y/N]*: 
 > ***Yes***
+
 > Enter the customer id: 18055986
+
 > Enter the product name: SimpliSafe Wireless Home Security Command
+
 > These products were selected for your customer by using similar user profiles for recommendations
 
 	The top recommendation are:
@@ -39,7 +38,9 @@ The command line interface will prompt you for information and display your resu
 	
 > *"Geetha, do you want to recommend similar items for users to purchase? [y/N]?"*
 > ***Yes****
+
 > Enter the product name: SimpliSafe Wireless Home Security Command
+
 > These items were selected for your customer by using item similarities
 
 	The top recommendations are:
