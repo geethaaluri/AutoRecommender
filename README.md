@@ -15,8 +15,11 @@ After downloading this repo and follow the installation instuctions below you wi
 The command line interface will prompt you for information and display your results, for example: 
 
 > *Welcome to RecServe! Let me help you with the product recommendations.*
+
 > Enter your name: Geetha
+
 > Enter the name of your business: Insight
+
 > Enter the path for your sample data: data_subset.csv
 
 
