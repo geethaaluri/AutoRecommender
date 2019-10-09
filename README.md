@@ -14,47 +14,64 @@ After downloading this repo and follow the installation instuctions below you wi
 
 The command line interface will prompt you for information and display your results, for example: 
 
-> *Thank you Amber here are your recommendations:*
-> Generating Movie Recommendations...
-> Movies (year) Average Rating:
+> *Welcome to RecServe! Let me help you with the product recommendations.*
+> Enter your name: Geetha
+> Enter the name of your business: Insight
+> Enter the path for your sample data: data_subset.csv
 
-	['Return of the Jedi (1983)' 3.8]
-	['Wizard of Oz, The (1939)' 3.78]
-	['Empire Strikes Back, The (1980)' 3.76]
 
-> *Would you like to view the factors that led to these particular movie recommendations? [y/N]*: 
+> *Geetha, do you want to recommend items for users to purchase? [y/N]*: 
 > ***Yes***
+> Enter the customer id: 18055986
+> Enter the product name: SimpliSafe Wireless Home Security Command
+> These products were selected for your customer by using similar user profiles for recommendations
 
-> These movies were selected for by using ***10*** similar user profiles for movie recommendations
-> These ***10*** user profiles profiles were ***>97.88%*** similar to your own.
+	The top recommendation are:
+	1. 5mm Black Plastic LED Holders x50
+	2. General Electric WD12X10278 Roller Stud
+	3. TaoTronics Sound Activated RGB Music Control
+	4. S14 Bulbs by Deneve, 11 Watts, Clear Glass S14
+	5. Rheem Ruud Weather King, RGP Mid Efficiency
 	
-	Atrribute breakdown of similar users:
-	Female gender: 80.0%
-	Over the age of 30: 30.0%
-	Technical occupation: 100.0%
-	Westcoast: 40.0%
 	
-> *"Would you like to change how much YOUR attributes contribute to your recommendations? [y/N]?"*
+> *"Geetha, do you want to recommend similar items for users to purchase? [y/N]?"*
 > ***Yes****
-> Generating Movie Recommendations...
-> Movies (year) Average Rating:
+> Enter the product name: SimpliSafe Wireless Home Security Command
+> These items were selected for your customer by using item similarities
 
-	['Return of the Jedi (1983)' 3.8]
-	['Wizard of Oz, The (1939)' 3.78]
-	['Empire Strikes Back, The (1980)' 3.76]
-
-> *Would you like to view the factors that led to these particular movie recommendations? [y/N]*: 
-> ***Yes***
-
-> These movies were selected for by using ***10*** similar user profiles for movie recommendations
-> These ***10*** user profiles profiles were ***>97.88%*** similar to your own.
+	The top recommendations are:
+	1. GE Simon XT Wireless Home Security System
+	2. 1byone Wireless Home Security Driveway Alarm
+	3. AAS 100 Wireless Home Security Alarm kit
+	4. AAS V500 Wireless Home Security Alarm System
+	5. JEBSENS - Home Security TV STV-21 Burglar detector
 	
-	Atrribute breakdown of similar users:
-	Female gender: 80.0%
-	Over the age of 30: 30.0%
-	Technical occupation: 100.0%
-	Westcoast: 40.0%
 
-## Setup
-Clone repository and update python path
-```
+The goal of RecServe is to be deployed within a company's system to suggest a recommendation algortihm that works best for their data and ultimately give appropriate recommendations based on user input.
+
+## Data
+
+RecServe is currently using the Amazon Reviews Dataset.
+
+	142.8 million reviews
+	review data - ratings, text, helpfulness votes
+	product data - descriptions, category information
+	data spanning from May 1996 - July 2014.
+
+SAMPLE CONTENT:
+https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_us.tsv
+https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_fr.tsv 
+
+
+## Requirements / Dependencies
+	Python 3.6
+	Pandas 
+	Click 
+	Colorama 
+	Surprise  
+	Scikit-learn 
+Scikit-learn requires:
+
+    Python (>= 2.7 or >= 3.3)
+    NumPy (>= 1.8.2)
+    SciPy (>= 0.13.3)	
