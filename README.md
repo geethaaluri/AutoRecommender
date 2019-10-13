@@ -59,6 +59,7 @@ RecServe is currently using the Amazon Reviews Dataset.
 	data spanning from May 1996 - July 2014.
 
 SAMPLE CONTENT:
+
 https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_us.tsv
 https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_fr.tsv 
 
@@ -87,8 +88,7 @@ Scikit-learn requires:
 Clone repository and update python path:
 The easiest way to download this project is by using git from the command-line:
 
-	git clone https://github.com/AstronomerAmber/Project-Orient.git
-	
+	git clone https://github.com/geethaaluri/AutoRecommender.git
 	
 Unzip pickeled data file from command line:
 
@@ -99,13 +99,13 @@ Unzip pickeled data file from command line:
 ## Environment
 I recommend creating a conda environoment so you do not destroy your main installation in case you make a mistake somewhere:
 
-    conda create --name Orient_3.6 python=3.6 ipykernel
+    conda create --name RecServe_3.6 python=3.6 ipykernel
 You can activate the new environment by running the following (on Linux):
 
-    source activate Orient_3.6 
+    source activate RecServe_3.6 
 And deactivate it:
 
-    source deactivate Orient_3.6 
+    source deactivate RecServe_3.6 
 
 ## Build Environment (***Optional***)
 
