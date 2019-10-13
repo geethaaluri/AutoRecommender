@@ -15,6 +15,7 @@ After downloading this repo and follow the installation instuctions below you wi
 The command line interface will prompt you for information and display your results, for example: 
 
 > *"Welcome to RecServe! Let me help you with the product recommendations."*
+
 > *Enter the path for your sample data:* data_subset.csv
 
 
@@ -74,3 +75,70 @@ Scikit-learn requires:
     Python (>= 2.7 or >= 3.3)
     NumPy (>= 1.8.2)
     SciPy (>= 0.13.3)	
+    
+ ## Package Installations
+	pip install pandas
+	pip install click
+	pip install colorama
+	pip install surprise 
+	pip install scikit-learn or pip install sklearn
+
+## Installation / Setup
+Clone repository and update python path:
+The easiest way to download this project is by using git from the command-line:
+
+	git clone https://github.com/AstronomerAmber/Project-Orient.git
+	
+	
+Unzip pickeled data file from command line:
+
+	cd Data/
+	unzip predicted_ratings.pkl.zip
+
+
+## Environment
+I recommend creating a conda environoment so you do not destroy your main installation in case you make a mistake somewhere:
+
+    conda create --name Orient_3.6 python=3.6 ipykernel
+You can activate the new environment by running the following (on Linux):
+
+    source activate Orient_3.6 
+And deactivate it:
+
+    source deactivate Orient_3.6 
+
+## Build Environment (***Optional***)
+
+> Before running your Orient.py script:
+ 
+If you would like to rerun the Keras model to fill in the User x Movie matrix run:
+	
+	python fill_user_matrix.py
+	
+This will build a Keras factorization model to predict previously unrated movies for users with embeddings. The resulting pkl file will be: (also option to generate a csv file)
+
+	predicted_ratings.pkl
+
+This file is already available in the Orient 'Data' folder once you unpack the predicted_ratings.pkl.zip file. 
+	
+To generate occupation embeddings you can run:
+	
+	python Word2Vec_occupations.py
+
+To generate the csv file (which is also provided to you in the repo, but in the Word2Vec folder):
+
+	Occupation_embeddings.csv
+	
+I would only recommend this to those who would like to download Google's [Word2Vec](http://word2vec.googlecode.com/svn/trunk/) tool. 
+
+## Serving Orient
+
+Now you should be all set to get your movie recommendations through the Orient.py interactive command-line interface using:
+
+	cd src/
+	Python Orient.py
+	
+Thank you for choosing Orient to optimize your ***Movie Night*** experience!
+
+## Licensing
+MovieLens Dataset [LICENSE](https://github.com/AstronomerAmber/Project-Orient/edit/master/LICENSE.md)
