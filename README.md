@@ -8,7 +8,7 @@ RecServe is a recommendations as a service tool that allows users to input their
 
 RecServe is an intelligent recommendation system that recommends a single algorithm without training and tuning five or more different ML algorithms!
 
-A google slide presentation can be found here: http://bit.ly/geetha-recserve
+A google slide presentation can be found [here](http://bit.ly/geetha-recserve)
 
 After downloading this repo and follow the installation instuctions below you will be able to experiment with RecServe through an interactive command line interface.
 
@@ -16,13 +16,13 @@ The command line interface will prompt you for information and display your resu
 
 > *"Welcome to RecServe! Let me help you with the product recommendations."*
 
-> Enter the path for your sample data: data_subset.csv
+> *Enter the path for your sample data:* data_subset.csv
 
 
 > *"Geetha, do you want to recommend items for users to purchase? [y/N]*"
 > ***Yes***
 
-> Enter the customer id: 18055986
+> *Enter the customer id: 18055986
 
 > Enter the product name: SimpliSafe Wireless Home Security Command
 
