@@ -22,7 +22,6 @@ The command line interface will prompt you for information and display your resu
 > ***Yes***
 
 > *Enter the customer id*: 18055986
-> *Enter the product name*: SimpliSafe Wireless Home Security Command
 
 	These products were selected for your customer by using similar user profiles for recommendations
 	The top recommendation are:
