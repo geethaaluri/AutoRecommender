@@ -132,7 +132,7 @@ To generate the csv file (which is also provided to you in the repo, but in the 
 
 ## Serving RecServe
 
-Now you should be all set to get your product recommendations through the recerve.py interactive command-line interface using:
+Now you should be all set to get your product recommendations through the recserve.py interactive command-line interface using:
 
 	cd src/
 	Python recserve.py
