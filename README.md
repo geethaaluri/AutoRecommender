@@ -61,6 +61,7 @@ RecServe is currently using the Amazon Reviews Dataset.
 SAMPLE CONTENT:
 
 https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_us.tsv
+
 https://s3.amazonaws.com/amazon-reviews-pds/tsv/sample_fr.tsv 
 
 
