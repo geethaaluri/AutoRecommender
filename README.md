@@ -120,7 +120,7 @@ This will build a Keras factorization model to predict previously unrated movies
 
 	predicted_ratings.pkl
 
-This file is already available in the Orient 'Data' folder once you unpack the predicted_ratings.pkl.zip file. 
+This file is already available in the RecServe 'Data' folder once you unpack the predicted_ratings.pkl.zip file. 
 	
 To generate occupation embeddings you can run:
 	
@@ -129,17 +129,13 @@ To generate occupation embeddings you can run:
 To generate the csv file (which is also provided to you in the repo, but in the Word2Vec folder):
 
 	Occupation_embeddings.csv
-	
-I would only recommend this to those who would like to download Google's [Word2Vec](http://word2vec.googlecode.com/svn/trunk/) tool. 
 
-## Serving Orient
+## Serving RecServe
 
-Now you should be all set to get your movie recommendations through the Orient.py interactive command-line interface using:
+Now you should be all set to get your product recommendations through the recerve.py interactive command-line interface using:
 
 	cd src/
-	Python Orient.py
+	Python recserve.py
 	
-Thank you for choosing Orient to optimize your ***Movie Night*** experience!
+Thank you for choosing RecServe!
 
-## Licensing
-MovieLens Dataset [LICENSE](https://github.com/AstronomerAmber/Project-Orient/edit/master/LICENSE.md)
